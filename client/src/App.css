@@ -1,0 +1,39 @@
+/* Custom class for dark blue background */
+.bg-dark-blue {
+  background-color: #001f3f; /* Dark blue color */
+}
+
+/* Custom class for neon hover effect */
+.neon-hover {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s, box-shadow 0.4s;
+}
+
+.neon-hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(2, 101, 240, 0.2);
+  filter: blur(15px);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.neon-hover:hover::before {
+  opacity: 1;
+}
+
+.neon-hover:hover {
+  color: #0915f8a9;
+  box-shadow: 0 0 10px rgba(3, 144, 252, 0.8);
+}
+
+/* Button width */
+.btn-wide {
+  width: 100%;
+}
